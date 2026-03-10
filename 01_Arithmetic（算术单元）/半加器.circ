@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project source="2.7.1" version="1.0">
+  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+
+  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Gates" name="1"/>
+  <lib desc="#Plexers" name="2"/>
+  <lib desc="#Arithmetic" name="3"/>
+  <lib desc="#Memory" name="4">
+    <tool name="ROM">
+      <a name="contents">addr/data: 8 8
+0
+</a>
+    </tool>
+  </lib>
+  <lib desc="#I/O" name="5"/>
+  <lib desc="#Base" name="6">
+    <tool name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+  </lib>
+  <lib desc="file#D:\Simulation_CIrcuits\00_Gates\AND_Gate.circ" name="7"/>
+  <lib desc="file#D:\Simulation_CIrcuits\00_Gates\OR_Gate.circ" name="8"/>
+  <lib desc="file#D:\Simulation_CIrcuits\00_Gates\XOR_Gate.circ" name="9"/>
+  <main name="半加器"/>
+  <options>
+    <a name="gateUndefined" val="ignore"/>
+    <a name="simlimit" val="1000"/>
+    <a name="simrand" val="0"/>
+  </options>
+  <mappings>
+    <tool lib="6" map="Button2" name="Menu Tool"/>
+    <tool lib="6" map="Button3" name="Menu Tool"/>
+    <tool lib="6" map="Ctrl Button1" name="Menu Tool"/>
+  </mappings>
+  <toolbar>
+    <tool lib="6" name="Poke Tool"/>
+    <tool lib="6" name="Edit Tool"/>
+    <tool lib="6" name="Text Tool">
+      <a name="text" val=""/>
+      <a name="font" val="SansSerif plain 12"/>
+      <a name="halign" val="center"/>
+      <a name="valign" val="base"/>
+    </tool>
+    <sep/>
+    <tool lib="0" name="Pin">
+      <a name="tristate" val="false"/>
+    </tool>
+    <tool lib="0" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </tool>
+    <tool lib="1" name="NOT Gate"/>
+    <tool lib="1" name="AND Gate"/>
+    <tool lib="1" name="OR Gate"/>
+  </toolbar>
+  <circuit name="半加器">
+    <a name="circuit" val="半加器"/>
+    <a name="clabel" val="半加器"/>
+    <a name="clabelup" val="east"/>
+    <a name="clabelfont" val="SansSerif plain 9"/>
+    <wire from="(160,210)" to="(190,210)"/>
+    <wire from="(190,210)" to="(220,210)"/>
+    <wire from="(250,210)" to="(340,210)"/>
+    <wire from="(160,220)" to="(220,220)"/>
+    <wire from="(240,260)" to="(240,270)"/>
+    <wire from="(190,210)" to="(190,250)"/>
+    <wire from="(290,250)" to="(340,250)"/>
+    <wire from="(110,160)" to="(160,160)"/>
+    <wire from="(110,270)" to="(160,270)"/>
+    <wire from="(240,260)" to="(260,260)"/>
+    <wire from="(160,220)" to="(160,270)"/>
+    <wire from="(160,160)" to="(160,210)"/>
+    <wire from="(160,270)" to="(240,270)"/>
+    <wire from="(190,250)" to="(260,250)"/>
+    <comp lib="0" loc="(340,250)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="原位"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(340,210)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="进位"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(110,160)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="第一个数的末位"/>
+    </comp>
+    <comp lib="7" loc="(250,210)" name="AND_Gate"/>
+    <comp lib="9" loc="(290,250)" name="XOR_Gate"/>
+    <comp lib="0" loc="(110,270)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="第二个数的末位"/>
+    </comp>
+  </circuit>
+</project>
