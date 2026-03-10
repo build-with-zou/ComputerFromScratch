@@ -22,19 +22,19 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#D:\Simulation_CIrcuits\06_Decoder（译码器）\4位输入OP.circ" name="7"/>
-  <lib desc="file#D:\Simulation_CIrcuits\01_Arithmetic（算术单元）\八位数加法器.circ" name="8"/>
-  <lib desc="file#D:\Simulation_CIrcuits\01_Arithmetic（算术单元）\八位数减法器.circ" name="9"/>
-  <lib desc="file#D:\Simulation_CIrcuits\01_Arithmetic（算术单元）\递增器.circ" name="10"/>
-  <lib desc="file#D:\Simulation_CIrcuits\01_Arithmetic（算术单元）\递减器.circ" name="11"/>
-  <lib desc="file#D:\Simulation_CIrcuits\02_Logic（逻辑单元）\八位数按位与.circ" name="12"/>
-  <lib desc="file#D:\Simulation_CIrcuits\02_Logic（逻辑单元）\八位数按位或.circ" name="13"/>
-  <lib desc="file#D:\Simulation_CIrcuits\02_Logic（逻辑单元）\八位数按位异或.circ" name="14"/>
-  <lib desc="file#D:\Simulation_CIrcuits\02_Logic（逻辑单元）\八位数按位非.circ" name="15"/>
-  <lib desc="file#D:\Simulation_CIrcuits\03_Shift（移动单元）\左移1位.circ" name="16"/>
-  <lib desc="file#D:\Simulation_CIrcuits\03_Shift（移动单元）\右移1位.circ" name="17"/>
-  <lib desc="file#D:\Simulation_CIrcuits\05_Mux（选择器）\8位带宽的16选1选择器.circ" name="18"/>
-  <main name="main"/>
+  <lib desc="file#D:\Simulation_Circuits\06_Decoder（译码器）\4位输入OP.circ" name="7"/>
+  <lib desc="file#D:\Simulation_Circuits\01_Arithmetic（算术单元）\八位数加法器.circ" name="8"/>
+  <lib desc="file#D:\Simulation_Circuits\01_Arithmetic（算术单元）\八位数减法器.circ" name="9"/>
+  <lib desc="file#D:\Simulation_Circuits\01_Arithmetic（算术单元）\递增器.circ" name="10"/>
+  <lib desc="file#D:\Simulation_Circuits\01_Arithmetic（算术单元）\递减器.circ" name="11"/>
+  <lib desc="file#D:\Simulation_Circuits\02_Logic（逻辑单元）\八位数按位与.circ" name="12"/>
+  <lib desc="file#D:\Simulation_Circuits\02_Logic（逻辑单元）\八位数按位或.circ" name="13"/>
+  <lib desc="file#D:\Simulation_Circuits\02_Logic（逻辑单元）\八位数按位异或.circ" name="14"/>
+  <lib desc="file#D:\Simulation_Circuits\02_Logic（逻辑单元）\八位数按位非.circ" name="15"/>
+  <lib desc="file#D:\Simulation_Circuits\03_Shift（移动单元）\左移1位.circ" name="16"/>
+  <lib desc="file#D:\Simulation_Circuits\03_Shift（移动单元）\右移1位.circ" name="17"/>
+  <lib desc="file#D:\Simulation_Circuits\05_Mux（选择器）\8位带宽的16选1选择器.circ" name="18"/>
+  <main name="ALU"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -67,9 +67,9 @@
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="main">
-    <a name="circuit" val="main"/>
-    <a name="clabel" val=""/>
+  <circuit name="ALU">
+    <a name="circuit" val="ALU"/>
+    <a name="clabel" val="ALU"/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <wire from="(560,890)" to="(560,1090)"/>
@@ -273,169 +273,36 @@
     <wire from="(1160,1590)" to="(1310,1590)"/>
     <wire from="(740,330)" to="(750,330)"/>
     <wire from="(740,410)" to="(750,410)"/>
-    <comp lib="0" loc="(100,500)" name="Pin">
+    <comp lib="14" loc="(770,1440)" name="8位按位异或">
+      <a name="label" val="0110按位异或"/>
+    </comp>
+    <comp lib="0" loc="(100,260)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="输入数2第7位"/>
-    </comp>
-    <comp lib="0" loc="(100,440)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数2第4位"/>
-    </comp>
-    <comp lib="13" loc="(770,1200)" name="8位按位或">
-      <a name="label" val="0101按位或"/>
-    </comp>
-    <comp lib="0" loc="(1430,100)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(100,420)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数2第3位"/>
-    </comp>
-    <comp lib="0" loc="(790,1600)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1580,570)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(100,300)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数1第6位"/>
-    </comp>
-    <comp lib="0" loc="(720,870)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(790,1190)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1580,670)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
+      <a name="label" val="输入数1第4位"/>
     </comp>
     <comp lib="0" loc="(1430,660)" name="Splitter">
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(1430,1140)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1430,1220)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1120,660)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(100,380)" name="Pin">
+    <comp lib="0" loc="(100,220)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="输入数2第1位"/>
-    </comp>
-    <comp lib="0" loc="(1580,630)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
+      <a name="label" val="输入数1第2位"/>
     </comp>
     <comp lib="0" loc="(280,590)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
-    <comp lib="0" loc="(100,240)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数1第3位"/>
-    </comp>
-    <comp lib="0" loc="(250,230)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(720,1770)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="9" loc="(780,300)" name="八位数减法器">
-      <a name="label" val="0001减法器"/>
-    </comp>
-    <comp lib="11" loc="(770,710)" name="递减器">
-      <a name="label" val="0011递减"/>
-    </comp>
-    <comp lib="0" loc="(1120,1310)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(790,960)" name="Splitter">
+    <comp lib="0" loc="(1160,1380)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="14" loc="(770,1440)" name="8位按位异或">
-      <a name="label" val="0110按位异或"/>
+    <comp lib="12" loc="(770,970)" name="8位按位与">
+      <a name="label" val="0100按位与"/>
     </comp>
-    <comp lib="0" loc="(1430,500)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(100,320)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数1第7位"/>
-    </comp>
-    <comp lib="0" loc="(1580,690)" name="Pin">
+    <comp lib="0" loc="(1160,1140)" name="Splitter">
       <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(790,1430)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1430,580)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1580,650)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(100,200)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数1第1位"/>
-    </comp>
-    <comp lib="0" loc="(720,420)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(1430,820)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1430,1300)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(100,660)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="状态码4"/>
-    </comp>
-    <comp lib="0" loc="(720,190)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="17" loc="(1170,260)" name="右移1位">
-      <a name="label" val="1001后移一位"/>
-    </comp>
-    <comp lib="0" loc="(1430,260)" name="Splitter">
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
@@ -443,181 +310,48 @@
       <a name="fanout" val="16"/>
       <a name="incoming" val="16"/>
     </comp>
-    <comp lib="0" loc="(790,480)" name="Splitter">
-      <a name="facing" val="west"/>
+    <comp lib="0" loc="(1430,580)" name="Splitter">
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(100,340)" name="Pin">
+    <comp lib="0" loc="(100,500)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="输入数1第8位"/>
+      <a name="label" val="输入数2第7位"/>
     </comp>
-    <comp lib="18" loc="(1480,640)" name="8位带宽的16选1选择器"/>
-    <comp lib="0" loc="(100,460)" name="Pin">
+    <comp lib="0" loc="(100,200)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="输入数2第5位"/>
+      <a name="label" val="输入数1第1位"/>
     </comp>
-    <comp lib="0" loc="(1190,20)" name="Splitter">
+    <comp lib="16" loc="(1170,30)" name="前移1位">
+      <a name="label" val="1000前移1位"/>
+    </comp>
+    <comp lib="0" loc="(1120,1550)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(1580,610)" name="Pin">
       <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1430,740)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(720,650)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(720,1560)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(1120,420)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(1120,1760)" name="Splitter">
       <a name="fanout" val="16"/>
       <a name="incoming" val="16"/>
     </comp>
-    <comp lib="0" loc="(100,600)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="状态码1"/>
-    </comp>
-    <comp lib="0" loc="(720,1090)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="12" loc="(770,970)" name="8位按位与">
-      <a name="label" val="0100按位与"/>
-    </comp>
-    <comp lib="0" loc="(1430,980)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(100,620)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="状态码2"/>
-    </comp>
-    <comp lib="0" loc="(1580,590)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="15" loc="(770,1610)" name="8位数按位非">
-      <a name="label" val="0111按位非"/>
-    </comp>
-    <comp lib="0" loc="(1160,700)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1160,1380)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(100,520)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数2第8位"/>
-    </comp>
-    <comp lib="0" loc="(1120,190)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="8" loc="(770,70)" name="八位数加法器">
-      <a name="label" val="0000加法器"/>
-    </comp>
-    <comp lib="0" loc="(1120,1080)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(1120,870)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(1160,1590)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(100,260)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数1第4位"/>
-    </comp>
-    <comp lib="0" loc="(100,220)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数1第2位"/>
-    </comp>
-    <comp lib="0" loc="(1430,340)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1430,1340)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(100,640)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="状态码3"/>
-    </comp>
-    <comp lib="0" loc="(100,480)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数2第6位"/>
-    </comp>
-    <comp lib="0" loc="(1190,250)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1430,1060)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1160,490)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1160,1140)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="16" loc="(1170,30)" name="前移1位">
-      <a name="label" val="1000前移1位"/>
-    </comp>
     <comp lib="0" loc="(1430,420)" name="Splitter">
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(1580,710)" name="Pin">
+    <comp lib="0" loc="(1430,1300)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(790,60)" name="Splitter">
       <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(100,280)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数1第5位"/>
-    </comp>
-    <comp lib="0" loc="(1430,180)" name="Splitter">
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(1430,900)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(100,400)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="输入数2第2位"/>
-    </comp>
-    <comp lib="10" loc="(770,490)" name="递增器">
-      <a name="label" val="0010递增"/>
-    </comp>
-    <comp lib="0" loc="(800,290)" name="Splitter">
+    <comp lib="0" loc="(790,1600)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
@@ -627,24 +361,290 @@
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(1120,1550)" name="Splitter">
-      <a name="fanout" val="16"/>
-      <a name="incoming" val="16"/>
-    </comp>
-    <comp lib="0" loc="(790,60)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
     <comp lib="0" loc="(1160,910)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(1580,610)" name="Pin">
+    <comp lib="0" loc="(100,660)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="状态码4"/>
+    </comp>
+    <comp lib="0" loc="(1580,710)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1120,660)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(720,870)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(720,1560)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(100,640)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="状态码3"/>
+    </comp>
+    <comp lib="0" loc="(100,520)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数2第8位"/>
+    </comp>
+    <comp lib="0" loc="(1580,650)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(790,960)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(790,480)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1120,1310)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(1430,340)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(720,1770)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(1430,1060)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1430,900)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1580,630)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(100,400)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数2第2位"/>
+    </comp>
+    <comp lib="0" loc="(1430,180)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1160,700)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="10" loc="(770,490)" name="递增器">
+      <a name="label" val="0010递增"/>
+    </comp>
+    <comp lib="0" loc="(100,460)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数2第5位"/>
+    </comp>
+    <comp lib="0" loc="(100,600)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="状态码1"/>
+    </comp>
+    <comp lib="0" loc="(1160,1590)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(100,320)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数1第7位"/>
+    </comp>
+    <comp lib="0" loc="(100,480)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数2第6位"/>
+    </comp>
+    <comp lib="13" loc="(770,1200)" name="8位按位或">
+      <a name="label" val="0101按位或"/>
+    </comp>
+    <comp lib="0" loc="(720,190)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="17" loc="(1170,260)" name="右移1位">
+      <a name="label" val="1001后移一位"/>
+    </comp>
+    <comp lib="0" loc="(250,230)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(100,340)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数1第8位"/>
+    </comp>
+    <comp lib="15" loc="(770,1610)" name="8位数按位非">
+      <a name="label" val="0111按位非"/>
+    </comp>
+    <comp lib="0" loc="(1430,500)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(100,280)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数1第5位"/>
+    </comp>
+    <comp lib="0" loc="(1430,980)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="8" loc="(770,70)" name="八位数加法器">
+      <a name="label" val="0000加法器"/>
+    </comp>
+    <comp lib="0" loc="(800,290)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="11" loc="(770,710)" name="递减器">
+      <a name="label" val="0011递减"/>
+    </comp>
+    <comp lib="0" loc="(790,1430)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1120,870)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(1430,1220)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1120,1080)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(100,620)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="状态码2"/>
+    </comp>
+    <comp lib="0" loc="(1190,20)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="18" loc="(1480,640)" name="8位带宽的16选1选择器"/>
+    <comp lib="0" loc="(720,650)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(720,420)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(1430,820)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(790,1190)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1430,260)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1430,100)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(720,1090)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(1430,740)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1430,1140)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(100,240)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数1第3位"/>
+    </comp>
+    <comp lib="0" loc="(1190,250)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1120,190)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(1580,690)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(100,380)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数2第1位"/>
+    </comp>
+    <comp lib="0" loc="(100,440)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数2第4位"/>
+    </comp>
+    <comp lib="0" loc="(1580,590)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1580,670)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1120,420)" name="Splitter">
+      <a name="fanout" val="16"/>
+      <a name="incoming" val="16"/>
+    </comp>
+    <comp lib="0" loc="(1580,570)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(1160,490)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1430,1340)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
+    <comp lib="0" loc="(100,420)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数2第3位"/>
+    </comp>
+    <comp lib="0" loc="(100,300)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入数1第6位"/>
+    </comp>
+    <comp lib="9" loc="(780,300)" name="八位数减法器">
+      <a name="label" val="0001减法器"/>
     </comp>
   </circuit>
 </project>
