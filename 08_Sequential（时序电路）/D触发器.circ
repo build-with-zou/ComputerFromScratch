@@ -24,6 +24,7 @@
   </lib>
   <lib desc="file#D:\Simulation_Circuits\00_Gates\Inverters.circ" name="7"/>
   <lib desc="file#反向输出D锁存器.circ" name="8"/>
+  <lib desc="file#传输门.circ" name="9"/>
   <main name="触发器"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -76,26 +77,26 @@
     <wire from="(480,330)" to="(560,330)"/>
     <wire from="(220,230)" to="(450,230)"/>
     <wire from="(380,340)" to="(450,340)"/>
-    <comp lib="8" loc="(480,220)" name="D锁存器">
-      <a name="label" val="主锁存器"/>
-    </comp>
-    <comp lib="7" loc="(310,330)" name="Inverter"/>
     <comp lib="0" loc="(140,270)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="输入"/>
     </comp>
+    <comp lib="8" loc="(480,220)" name="D锁存器">
+      <a name="label" val="主锁存器"/>
+    </comp>
+    <comp lib="7" loc="(310,330)" name="Inverter"/>
     <comp lib="8" loc="(480,330)" name="D锁存器">
       <a name="label" val="从锁存器"/>
-    </comp>
-    <comp lib="0" loc="(140,220)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="时钟输入"/>
     </comp>
     <comp lib="0" loc="(560,330)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="触发器的输出Q"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(140,220)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="时钟输入"/>
     </comp>
   </circuit>
 </project>

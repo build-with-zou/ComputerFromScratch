@@ -22,8 +22,9 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <lib desc="file#D:\Simulation_Circuits\00_Gates\Inverters.circ" name="7"/>
-  <main name="传输门"/>
+  <lib desc="file#D:\Simulation_Circuits\08_Sequential（时序电路）\传输门.circ" name="7"/>
+  <lib desc="file#Inverters.circ" name="8"/>
+  <main name="2to1单刀双掷"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -56,41 +57,47 @@
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="传输门">
-    <a name="circuit" val="传输门"/>
-    <a name="clabel" val="传输门"/>
+  <circuit name="2to1单刀双掷">
+    <a name="circuit" val="2to1单刀双掷"/>
+    <a name="clabel" val="2to1"/>
     <a name="clabelup" val="east"/>
-    <a name="clabelfont" val="SansSerif plain 9"/>
-    <wire from="(360,230)" to="(360,250)"/>
-    <wire from="(230,230)" to="(230,360)"/>
-    <wire from="(380,330)" to="(470,330)"/>
-    <wire from="(280,230)" to="(360,230)"/>
-    <wire from="(340,330)" to="(340,380)"/>
-    <wire from="(380,330)" to="(380,380)"/>
-    <wire from="(340,270)" to="(340,330)"/>
-    <wire from="(380,270)" to="(380,330)"/>
-    <wire from="(210,330)" to="(340,330)"/>
-    <wire from="(230,360)" to="(360,360)"/>
-    <wire from="(210,230)" to="(230,230)"/>
-    <wire from="(230,230)" to="(250,230)"/>
-    <comp lib="0" loc="(380,270)" name="Transistor"/>
-    <comp lib="0" loc="(210,330)" name="Pin">
+    <a name="clabelfont" val="SansSerif plain 12"/>
+    <wire from="(70,260)" to="(260,260)"/>
+    <wire from="(120,330)" to="(260,330)"/>
+    <wire from="(60,190)" to="(70,190)"/>
+    <wire from="(70,190)" to="(70,260)"/>
+    <wire from="(70,260)" to="(70,330)"/>
+    <wire from="(290,260)" to="(340,260)"/>
+    <wire from="(290,330)" to="(340,330)"/>
+    <wire from="(70,330)" to="(90,330)"/>
+    <wire from="(160,270)" to="(260,270)"/>
+    <wire from="(160,340)" to="(260,340)"/>
+    <comp lib="7" loc="(290,330)" name="传输门"/>
+    <comp lib="0" loc="(60,190)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="输入"/>
+      <a name="label" val="控制信号"/>
     </comp>
-    <comp lib="0" loc="(380,380)" name="Transistor">
-      <a name="type" val="n"/>
-    </comp>
-    <comp lib="7" loc="(280,230)" name="Inverter"/>
-    <comp lib="0" loc="(470,330)" name="Pin">
+    <comp lib="0" loc="(340,330)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="输出"/>
+      <a name="label" val="控制0输入2"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(210,230)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="时钟输入"/>
+    <comp lib="0" loc="(340,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="控制1输入1"/>
+      <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="7" loc="(290,260)" name="传输门"/>
+    <comp lib="0" loc="(160,340)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入2"/>
+    </comp>
+    <comp lib="0" loc="(160,270)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="输入1"/>
+    </comp>
+    <comp lib="8" loc="(120,330)" name="Inverter"/>
   </circuit>
 </project>

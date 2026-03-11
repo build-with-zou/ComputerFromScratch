@@ -88,6 +88,16 @@
     <wire from="(380,320)" to="(390,320)"/>
     <wire from="(380,270)" to="(380,320)"/>
     <wire from="(330,240)" to="(330,360)"/>
+    <comp lib="8" loc="(420,240)" name="Inverter">
+      <a name="label" val="INV1"/>
+    </comp>
+    <comp lib="7" loc="(310,240)" name="传输门">
+      <a name="label" val="TG1"/>
+    </comp>
+    <comp lib="8" loc="(420,320)" name="Inverter">
+      <a name="label" val="INV2"/>
+    </comp>
+    <comp lib="8" loc="(480,210)" name="Inverter"/>
     <comp lib="7" loc="(560,240)" name="传输门">
       <a name="label" val="TG2"/>
     </comp>
@@ -101,19 +111,9 @@
       <a name="label" val="输出Q"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="8" loc="(420,320)" name="Inverter">
-      <a name="label" val="INV2"/>
-    </comp>
-    <comp lib="8" loc="(480,210)" name="Inverter"/>
-    <comp lib="8" loc="(420,240)" name="Inverter">
-      <a name="label" val="INV1"/>
-    </comp>
     <comp lib="0" loc="(150,210)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="时钟输入"/>
-    </comp>
-    <comp lib="7" loc="(310,240)" name="传输门">
-      <a name="label" val="TG1"/>
     </comp>
   </circuit>
 </project>
