@@ -80,47 +80,47 @@
     <wire from="(220,130)" to="(220,220)"/>
     <wire from="(300,300)" to="(300,330)"/>
     <wire from="(250,240)" to="(250,300)"/>
-    <comp lib="0" loc="(300,330)" name="Ground"/>
-    <comp lib="6" loc="(328,265)" name="Text">
-      <a name="text" val="N型"/>
+    <comp lib="0" loc="(300,190)" name="Transistor">
+      <a name="facing" val="south"/>
     </comp>
     <comp lib="6" loc="(326,135)" name="Text">
       <a name="text" val="P型"/>
     </comp>
-    <comp lib="6" loc="(275,219)" name="Text">
-      <a name="text" val="N型"/>
-    </comp>
-    <comp lib="6" loc="(324,173)" name="Text">
-      <a name="text" val="P型"/>
-    </comp>
-    <comp lib="0" loc="(300,150)" name="Transistor">
-      <a name="facing" val="south"/>
+    <comp lib="0" loc="(170,260)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Input2"/>
     </comp>
     <comp lib="0" loc="(170,220)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="Input1"/>
+    </comp>
+    <comp lib="6" loc="(324,173)" name="Text">
+      <a name="text" val="P型"/>
     </comp>
     <comp lib="0" loc="(300,70)" name="Power"/>
     <comp lib="0" loc="(250,200)" name="Transistor">
       <a name="type" val="n"/>
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="0" loc="(410,240)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="Output"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(170,260)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="Input2"/>
+    <comp lib="0" loc="(300,330)" name="Ground"/>
+    <comp lib="0" loc="(300,150)" name="Transistor">
+      <a name="facing" val="south"/>
     </comp>
     <comp lib="0" loc="(300,240)" name="Transistor">
       <a name="type" val="n"/>
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="0" loc="(300,190)" name="Transistor">
-      <a name="facing" val="south"/>
+    <comp lib="6" loc="(328,265)" name="Text">
+      <a name="text" val="N型"/>
+    </comp>
+    <comp lib="6" loc="(275,219)" name="Text">
+      <a name="text" val="N型"/>
+    </comp>
+    <comp lib="0" loc="(410,240)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="Output"/>
+      <a name="labelloc" val="east"/>
     </comp>
   </circuit>
 </project>
