@@ -92,6 +92,7 @@
     <wire from="(160,280)" to="(160,320)"/>
     <wire from="(420,230)" to="(440,230)"/>
     <wire from="(100,240)" to="(250,240)"/>
+    <wire from="(590,150)" to="(620,150)"/>
     <wire from="(100,190)" to="(120,190)"/>
     <wire from="(350,280)" to="(630,280)"/>
     <wire from="(350,190)" to="(500,190)"/>
@@ -104,6 +105,7 @@
     <wire from="(230,330)" to="(240,330)"/>
     <wire from="(140,150)" to="(140,270)"/>
     <wire from="(100,90)" to="(170,90)"/>
+    <wire from="(620,440)" to="(630,440)"/>
     <wire from="(540,170)" to="(540,180)"/>
     <wire from="(350,190)" to="(350,260)"/>
     <wire from="(100,320)" to="(160,320)"/>
@@ -135,6 +137,7 @@
     <wire from="(140,290)" to="(290,290)"/>
     <wire from="(360,260)" to="(380,260)"/>
     <wire from="(470,210)" to="(490,210)"/>
+    <wire from="(620,150)" to="(620,440)"/>
     <wire from="(180,360)" to="(200,360)"/>
     <wire from="(290,220)" to="(440,220)"/>
     <wire from="(240,320)" to="(260,320)"/>
@@ -148,90 +151,101 @@
     <wire from="(170,380)" to="(630,380)"/>
     <wire from="(100,210)" to="(110,210)"/>
     <wire from="(530,180)" to="(540,180)"/>
-    <comp lib="0" loc="(100,190)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="加数1的第7位"/>
-    </comp>
     <comp lib="0" loc="(100,210)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="加数1的第8位"/>
     </comp>
-    <comp lib="0" loc="(630,190)" name="Pin">
+    <comp lib="7" loc="(530,180)" name="全加器"/>
+    <comp lib="0" loc="(630,160)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(100,320)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="加数2的第5位"/>
-    </comp>
-    <comp lib="7" loc="(410,240)" name="全加器"/>
-    <comp lib="0" loc="(100,150)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="加数1的第5位"/>
-    </comp>
-    <comp lib="0" loc="(100,240)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="加数2的第1位"/>
-    </comp>
-    <comp lib="0" loc="(100,130)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="加数1的第4位"/>
-    </comp>
-    <comp lib="0" loc="(100,280)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="加数2的第3位"/>
-    </comp>
-    <comp lib="7" loc="(590,150)" name="全加器"/>
+    <comp lib="7" loc="(470,210)" name="全加器"/>
     <comp lib="0" loc="(100,300)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="加数2的第4位"/>
     </comp>
-    <comp lib="0" loc="(100,360)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="加数2的第7位"/>
-    </comp>
-    <comp lib="0" loc="(630,340)" name="Pin">
+    <comp lib="7" loc="(290,300)" name="全加器"/>
+    <comp lib="0" loc="(630,250)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="7" loc="(230,330)" name="全加器"/>
-    <comp lib="7" loc="(350,270)" name="全加器"/>
-    <comp lib="7" loc="(530,180)" name="全加器"/>
-    <comp lib="0" loc="(100,170)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="加数1的第6位"/>
-    </comp>
-    <comp lib="0" loc="(100,380)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="加数2的第8位"/>
+    <comp lib="0" loc="(630,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(630,280)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(100,170)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="加数1的第6位"/>
+    </comp>
+    <comp lib="0" loc="(100,360)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="加数2的第7位"/>
+    </comp>
+    <comp lib="0" loc="(100,150)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="加数1的第5位"/>
+    </comp>
+    <comp lib="8" loc="(170,370)" name="半加器"/>
+    <comp lib="0" loc="(630,340)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(630,440)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="cout"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(100,280)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="加数2的第3位"/>
+    </comp>
+    <comp lib="0" loc="(630,190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(100,340)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="加数2的第6位"/>
+    </comp>
+    <comp lib="0" loc="(100,70)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="加数1的第1位"/>
+    </comp>
     <comp lib="0" loc="(630,310)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="7" loc="(290,300)" name="全加器"/>
-    <comp lib="0" loc="(100,340)" name="Pin">
+    <comp lib="0" loc="(100,240)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="加数2的第6位"/>
+      <a name="label" val="加数2的第1位"/>
     </comp>
-    <comp lib="0" loc="(630,160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="0" loc="(100,380)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="加数2的第8位"/>
     </comp>
+    <comp lib="7" loc="(410,240)" name="全加器"/>
+    <comp lib="7" loc="(350,270)" name="全加器"/>
     <comp lib="0" loc="(100,110)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="加数1的第3位"/>
     </comp>
-    <comp lib="8" loc="(170,370)" name="半加器"/>
+    <comp lib="0" loc="(100,320)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="加数2的第5位"/>
+    </comp>
     <comp lib="0" loc="(100,90)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="加数1的第2位"/>
@@ -240,25 +254,20 @@
       <a name="tristate" val="false"/>
       <a name="label" val="加数2的第2位"/>
     </comp>
-    <comp lib="0" loc="(630,220)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(100,70)" name="Pin">
+    <comp lib="0" loc="(100,130)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="加数1的第1位"/>
+      <a name="label" val="加数1的第4位"/>
     </comp>
-    <comp lib="0" loc="(630,250)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="7" loc="(590,150)" name="全加器"/>
+    <comp lib="0" loc="(100,190)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="加数1的第7位"/>
     </comp>
-    <comp lib="7" loc="(470,210)" name="全加器"/>
     <comp lib="0" loc="(630,380)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="7" loc="(230,330)" name="全加器"/>
   </circuit>
 </project>
