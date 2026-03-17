@@ -2,7 +2,12 @@
 <project source="2.7.1" version="1.0">
   This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
 
-  <lib desc="#Wiring" name="0"/>
+  <lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
@@ -263,19 +268,18 @@
     <wire from="(710,340)" to="(710,390)"/>
     <wire from="(480,220)" to="(550,220)"/>
     <wire from="(540,290)" to="(550,290)"/>
-    <comp lib="0" loc="(780,440)" name="Pin">
+    <comp lib="9" loc="(580,230)" name="2to1单刀双掷"/>
+    <comp lib="0" loc="(780,380)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(70,170)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(320,20)" name="Splitter">
-      <a name="facing" val="south"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
+    <comp lib="8" loc="(440,150)" name="ALU"/>
+    <comp lib="9" loc="(580,260)" name="2to1单刀双掷"/>
+    <comp lib="0" loc="(780,420)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(140,320)" name="Pin">
       <a name="tristate" val="false"/>
@@ -285,13 +289,10 @@
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(780,420)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="0" loc="(140,400)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
-    <comp lib="7" loc="(310,90)" name="8位寄存器"/>
-    <comp lib="0" loc="(140,480)" name="Pin">
+    <comp lib="0" loc="(140,380)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(780,340)" name="Pin">
@@ -299,45 +300,82 @@
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(180,80)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="时钟信号"/>
-    </comp>
-    <comp lib="9" loc="(580,110)" name="2to1单刀双掷"/>
-    <comp lib="0" loc="(140,420)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(680,460)" name="Splitter">
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="9" loc="(580,260)" name="2to1单刀双掷"/>
-    <comp lib="0" loc="(180,250)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="RST信号"/>
-    </comp>
-    <comp lib="8" loc="(440,150)" name="ALU"/>
-    <comp lib="0" loc="(140,400)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(740,130)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="fanout" val="8"/>
-      <a name="incoming" val="8"/>
-    </comp>
-    <comp lib="0" loc="(180,210)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="使写能信号"/>
-    </comp>
     <comp lib="0" loc="(780,320)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(140,540)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="控制码4"/>
+    </comp>
+    <comp lib="0" loc="(140,520)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="控制码3"/>
+    </comp>
+    <comp lib="0" loc="(140,480)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="控制码1"/>
+    </comp>
+    <comp lib="0" loc="(680,460)" name="Splitter">
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="0" loc="(320,20)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
     <comp lib="0" loc="(140,500)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="控制码2"/>
+    </comp>
+    <comp lib="0" loc="(180,210)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="使写能信号"/>
+    </comp>
+    <comp lib="0" loc="(140,340)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(780,460)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="9" loc="(580,110)" name="2to1单刀双掷"/>
+    <comp lib="0" loc="(140,440)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="9" loc="(580,140)" name="2to1单刀双掷"/>
+    <comp lib="0" loc="(140,300)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(780,360)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(230,320)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="9" loc="(580,80)" name="2to1单刀双掷"/>
+    <comp lib="0" loc="(740,130)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="8"/>
+      <a name="incoming" val="8"/>
+    </comp>
+    <comp lib="7" loc="(310,90)" name="8位寄存器"/>
+    <comp lib="9" loc="(580,290)" name="2to1单刀双掷"/>
+    <comp lib="0" loc="(180,250)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="RST信号"/>
+    </comp>
+    <comp lib="0" loc="(180,80)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="时钟信号"/>
+    </comp>
     <comp lib="0" loc="(500,30)" name="Ground">
       <a name="facing" val="west"/>
     </comp>
@@ -345,50 +383,21 @@
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(230,320)" name="Splitter">
-      <a name="facing" val="west"/>
+    <comp lib="9" loc="(580,170)" name="2to1单刀双掷"/>
+    <comp lib="0" loc="(140,420)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(70,170)" name="Splitter">
       <a name="fanout" val="8"/>
       <a name="incoming" val="8"/>
     </comp>
-    <comp lib="0" loc="(780,460)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(780,380)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="9" loc="(580,200)" name="2to1单刀双掷"/>
-    <comp lib="9" loc="(580,290)" name="2to1单刀双掷"/>
-    <comp lib="9" loc="(580,80)" name="2to1单刀双掷"/>
-    <comp lib="0" loc="(780,360)" name="Pin">
+    <comp lib="0" loc="(780,440)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(140,360)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(140,380)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="9" loc="(580,230)" name="2to1单刀双掷"/>
-    <comp lib="0" loc="(140,300)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(140,540)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(140,340)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(140,440)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="9" loc="(580,170)" name="2to1单刀双掷"/>
-    <comp lib="0" loc="(140,520)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
   </circuit>
