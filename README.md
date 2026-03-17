@@ -328,6 +328,6 @@
 
 **作者**：一位热爱底层的大一学生  
 **日期**：2026年3月  
-**联系方式**：可通过 GitHub Issues 或邮件联系 build.with.me@gmain.com
+**联系方式**：可通过 GitHub Issues 或邮件联系 build.with.me@gmail.com
 
 希望这个项目能帮助更多同学理解计算机是如何工作的。如果你有任何问题或建议，欢迎随时交流！
